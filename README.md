@@ -25,3 +25,6 @@ symfony server:start
 # Populate the datebase with seats
 php bin/console doctrine:fixtures:load
 ```
+
+## Usage
+To use the project go to the [api documentation page](http://127.0.0.1:8000/api/doc) and make use of the solution endpoint.
