@@ -22,6 +22,9 @@ and fillin your database credentials
 # Starting the application
 symfony server:start
 
+# Migrate the database
+php bin/console doctrine:migrations:migrate
+
 # Populate the datebase with seats
 php bin/console doctrine:fixtures:load
 ```
