@@ -64,6 +64,10 @@ class SeatAllocator
                 $this->hashArray[] = $seat;
                 if (count($this->hashArray)  >= $AmountOfPersons)
                 {
+                    if (count($this->hashArray) === 1)
+                    {
+                        $this->groupsArray[] = $this->hashArray;
+                    }
                     break;
                 }
             }
@@ -75,7 +79,7 @@ class SeatAllocator
                 continue;
             }
 
-            if ($key === count($seats) -1 && count($this->hashArray) > 0)
+            if ($key === count($seats) -1)
             {
                 $this->groupsArray[] = $this->hashArray;
                 $this->hashArray = [];
@@ -95,10 +99,10 @@ class SeatAllocator
      */
     public function assignSeats(array $groupedSeats ,int $amountOfPersons) : array
     {
-        $this->hashArray = [];
         for ($i = 0; $i < count($groupedSeats); $i++)
         {
             $foundGroup = $groupedSeats[$i];
+
             for ($y = 0; $y < count($foundGroup); $y++)
             {
                 $seat = $foundGroup[$y];
