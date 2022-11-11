@@ -68,7 +68,7 @@ class SeatAllocator
                 }
             }
 
-            else if(count($this->hashArray) > 0)
+            if(count($this->hashArray) > 0)
             {
                 $this->groupsArray[] = $this->hashArray;
                 $this->hashArray = [];
