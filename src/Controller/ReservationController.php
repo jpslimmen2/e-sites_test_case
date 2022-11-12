@@ -21,7 +21,7 @@ class ReservationController extends AbstractController
     }
     /**
      * @OA\Parameter(
-     *     name="persons",
+     *     name="amountOfPersons",
      *     in="path",
      *     description="Field for setting amount of persons",
      *     @OA\Schema(type="integer")
